@@ -1,0 +1,77 @@
+﻿@model SporcuBilgiViewModel
+@{
+    ViewData["Title"] = "Sporcu Ekle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!-- Vertical Layout -->
+<div class="row clearfix">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    SPORCU KAYIT BİLGİLERİ
+                </h2>
+                <ul class="header-dropdown m-r--5">
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons">more_vert</i>
+                        </a>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="javascript:void(0);">Action</a></li>
+                            <li><a href="javascript:void(0);">Another action</a></li>
+                            <li><a href="javascript:void(0);">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="body">
+                <form asp-controller="Home" asp-action="SporcuEkle" method="post">
+
+                    <div class="form-group col-md-6">
+                        <label for="email_address">Ad</label>
+                        <div class="form-line">
+                            <input type="text" asp-for="Ad" id="email_address" class="form-control" placeholder="Adınızı Giriniz">
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="password">Soyad</label>
+                        <div class="form-line">
+                            <input type="text" asp-for="Soyad" id="password" class="form-control" placeholder="Soyadınız Giriniz">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="password">Doğum Yeri</label>
+                        <div class="form-line">
+                            <input type="text" asp-for="DogumYeri" id="password" class="form-control" placeholder="Doğum Yeri">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="password">Doğum Tarihi</label>
+                        <div class="form-line">
+                            <input type="text" asp-for="DogumTarihi" id="password" class="form-control" placeholder="Doğum Tarihi">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="password">Boy</label>
+                        <div class="form-line">
+                            <input type="text" asp-for="Boy" id="password" class="form-control" placeholder="Boy">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="password">Kilo</label>
+                        <div class="form-line">
+                            <input type="text" asp-for="Kilo" id="password" class="form-control" placeholder="Kilo">
+                        </div>
+                    </div>
+
+                    <br>
+                    <input type="submit" value="KAYDET" class="btn btn-primary m-t-15 waves-effect" /> 
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #END# Vertical Layout -->
